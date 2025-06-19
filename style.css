@@ -8,6 +8,8 @@
 :root {
     --blue-color: #1992d4;
     --gray-color: #e2e8f0;
+    --yellow-color: #f0b429;
+    --dark-gray-color: #636363;
 
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -30,6 +32,10 @@ nav {
 
 main {
     background-color: var(--gray-color);
+    display: grid;
+    grid-template-columns: 3.5fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 24px;
 }
 
 .link {
@@ -135,4 +141,47 @@ main {
         font-size: 1rem;
         padding: 8px 48px;
      }
+}
+
+#card-container {
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 18px;
+    border-left: 8px solid var(--yellow-color);
+
+     p {
+        color: var(--dark-gray-color);
+        font-size: 1rem;
+     }
+
+     p:first-child {
+        color: black;
+        font-weight: bold;
+        font-size: 1.2rem;
+     }
+
+     div:last-child {
+        display: flex;
+        gap: 8px;
+        justify-content: end;
+        position: relative;
+        bottom: 0;
+     }
+}
+
+main > div:first-child > p {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
 }
